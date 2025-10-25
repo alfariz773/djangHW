@@ -12,5 +12,7 @@
             <li>{{ customer.name }} - {{ customer.email }}</li>
         {% endfor %}
         </ul>
+        <a href="{% url 'add_customer' %}">Add Customer</a> |
+        <a href="{% url 'filter' %}">Filtered Customers</a>
 </body>
 </html>

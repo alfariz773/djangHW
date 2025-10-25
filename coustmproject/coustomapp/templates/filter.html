@@ -8,9 +8,18 @@
 <body>
     <h2>filtering customer</h2>
     <p>
-     {% if customer %}
-           {{ customer.name }} and {{ customer.email }}
-     {% endif %}
+    {% if customers %}
+        <ul>
+        {% for customer in customers %}
+            <li>{{ customer.name }} — {{ customer.email }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No customers found with '@example.com'</p>
+    {% endif %}
+
     </p>
+    <a href="{% url 'add_customer' %}">Add Customer</a> |
+    <a href="{% url 'all_coustomers' %}">All Customers</a>
 </body>
 </html>

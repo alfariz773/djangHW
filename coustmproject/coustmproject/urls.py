@@ -20,7 +20,7 @@ from coustomapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.list_coustomer,name='customer'),
-    path('all/', views.all_coustom, name='all_coustom'),
-     path('filter/', views.filter, name='filter'),
+    path('',views.list_coustomer,name='add_customer'),
+    path('all/', views.all_coustom, name='all_coustomers'),
+    path('filter/', views.filter, name='filter'),
 ]

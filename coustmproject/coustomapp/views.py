@@ -7,7 +7,7 @@ def list_coustomer(request):
         form = coustdetails(request.POST)
         if form.is_valid():
             form.save()
-            return  redirect("all_coustom")
+            return  redirect("all_coustomers")
     else:
         form= coustdetails()
         return render(request, 'submit.html',{'form':form})
