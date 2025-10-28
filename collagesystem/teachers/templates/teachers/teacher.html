@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher List</title>
+</head>
+<body>
+    <h2>{{ message }}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Refresh Message</button>
+    </form>
+    <ul>
+        {% for teacher in teachers %}
+            <li>{{ teacher }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
