@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Students</title>
+</head>
+<body>
+    <h1>Delete Students</h1>
+    <p>Are you sure you want to delete "{{ s.title }}"?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    </form>
+
+    <br>
+    <a href="{% url 'home' %}">Cancel</a>
+</body>
+</html>
