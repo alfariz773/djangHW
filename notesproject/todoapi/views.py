@@ -46,6 +46,6 @@ def add_note(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def list_notes(request):
-    notes = Note.objects.filter(user=request.user).order_by('-created_at')
+    notes = Note.objects.filter(user=request.user)
     serializer = NoteSerializer(notes, many=True)
     return Response(serializer.data)
