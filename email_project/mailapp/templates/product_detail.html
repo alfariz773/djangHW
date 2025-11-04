@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>Description: {{ product.description }}</p>
+    <p>Price: ₹{{ product.price }}</p>
+
+    <a href="{% url 'generate_pdf' product.pk %}">Download as PDF</a><br>
+    <a href="{% url 'send_product_email' product.pk %}">Send Product Info by Email</a>
+</body>
+</html>
