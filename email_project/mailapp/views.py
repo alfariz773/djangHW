@@ -35,7 +35,6 @@ def generate_pdf(request, pk):
 
     buffer = BytesIO()
     pisa_status = pisa.CreatePDF(html, dest=buffer)
-
     if pisa_status.err:
         return HttpResponse('PDF creation error!')
     else:
