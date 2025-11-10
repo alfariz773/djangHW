@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1>Welcome to Weight Tracker</h1>
+    <p>Track your weight, monitor progress, and calculate weight loss.</p>
+    {% if not user.is_authenticated %}
+    <a href="{% url 'signup' %}" class="btn btn-success">Sign Up</a>
+    <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+    {% endif %}
+</div>
+{% endblock %}
